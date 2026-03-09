@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Track Shipment - CargoConnect</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>Track Your Shipment</h1>
+<p>Enter AWB number to track shipment</p>
+
+<nav>
+<a href="dashboard.html">Dashboard</a>
+<a href="tracking.html">Track Shipment</a>
+</nav>
+</header>
+
+<section class="container">
+
+<input type="text" id="awbInput" placeholder="Enter AWB Number">
+<button id="trackingSearchBtn">Search</button>
+
+<div style="display:flex;gap:12px;align-items:center;margin-top:8px;">
+	<label for="transportFilter">Transport:</label>
+	<select id="transportFilter" style="padding:8px;border-radius:8px;">
+		<option value="all">All</option>
+		<option value="sea">Sea</option>
+		<option value="air">Air</option>
+	</select>
+
+	<label style="display:flex;align-items:center;gap:8px;margin-left:12px;">
+		<input type="checkbox" id="liveToggle"> Live updates
+		<span id="liveIndicator" class="live-indicator" style="display:none;margin-left:8px">● Live</span>
+	</label>
+</div>
+
+<div id="trackingResult" style="margin-top:16px"></div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>

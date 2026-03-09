@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CargoConnect - Analytics Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2>CargoConnect</h2>
+        <ul>
+            <li><a href="dashboard.html" class="active">Dashboard</a></li>
+            <li><a href="tracking.html">Track Shipment</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <h1>Logistics Analytics Dashboard</h1>
+
+        <!-- KPI Cards -->
+        <div class="kpi-container">
+            <div class="kpi-card">
+                <h3>Total Shipments</h3>
+                <p id="totalShipments">0</p>
+            </div>
+
+            <div class="kpi-card delivered">
+                <h3>Delivered</h3>
+                <p id="deliveredCount">0</p>
+            </div>
+
+            <div class="kpi-card transit">
+                <h3>In Transit</h3>
+                <p id="transitCount">0</p>
+            </div>
+
+            <div class="kpi-card pending">
+                <h3>Pending</h3>
+                <p id="pendingCount">0</p>
+            </div>
+        </div>
+
+        <!-- Charts -->
+        <div class="chart-container">
+            <canvas id="statusChart"></canvas>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="progressChart"></canvas>
+        </div>
+
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
